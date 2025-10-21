@@ -1,4 +1,4 @@
-name: "Build, Push, and Scan Super Mario Docker Image"
+name: "Build, Push, and Scan Super Mario Image"
 
 on:
     push:
