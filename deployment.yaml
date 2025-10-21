@@ -13,11 +13,11 @@ spec:
         app: supermariogame
     spec:
       containers:
-      - image: raghuthesecurityexpert/supermariogitopsproject:2
-        name: supermariogame-container
-        ports:
-        - containerPort: 8080
- 
+        - image: sedemgarr/training-repo:mario-game-6
+          name: supermariogame-container
+          ports:
+            - containerPort: 8080
+
 ---
 apiVersion: v1
 kind: Service
@@ -27,7 +27,7 @@ spec:
   selector:
     app: supermariogame
   ports:
-  - protocol: TCP
-    port: 8600  # <-- Change this line to your desired port
-    targetPort: 8080
+    - protocol: TCP
+      port: 8080 # <-- Change this line to your desired port
+      targetPort: 8080
   type: LoadBalancer
