@@ -3,7 +3,7 @@ name: "Build, Push, and Scan Super Mario Docker Image"
 on:
     push:
         branches:
-            - main
+            - master
 
 env:
     VERSION: ${{ github.run_number }}
